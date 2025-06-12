@@ -1,0 +1,124 @@
+/remove {
+  "name": "ns.down.data.schedule.fail",
+  "time": "2025-03-18T09:08:25.057271779Z",
+  "identifiers": [
+    {
+      "device_ids": {
+        "device_id": "multicast-group",
+        "application_ids": {
+          "application_id": "gie-fuota-app"
+        },
+        "dev_eui": "70B3D57ED800405A",
+        "dev_addr": "DEADBEEF"
+      }
+    }
+  ],
+  "data": {
+    "@type": "type.googleapis.com/ttn.lorawan.v3.ErrorDetails",
+    "namespace": "pkg/gatewayserver",
+    "name": "schedule",
+    "message_format": "schedule",
+    "correlation_id": "7ac4369a39844182a9743feb00524afe",
+    "code": 10,
+    "details": [
+      {
+        "@type": "type.googleapis.com/ttn.lorawan.v3.ScheduleDownlinkErrorDetails",
+        "path_errors": [
+          {
+            "namespace": "pkg/gatewayserver",
+            "name": "schedule_path",
+            "message_format": "schedule on path `{gateway_uid}`",
+            "attributes": {
+              "gateway_uid": "kona-enterprise-1@giefuota"
+            },
+            "correlation_id": "cc002b95bcc64c59917ac18f4b44d6aa",
+            "cause": {
+              "namespace": "pkg/gatewayserver/io",
+              "name": "tx_schedule",
+              "message_format": "schedule",
+              "correlation_id": "82dfb1470c284b4da29317d65c930f9a",
+              "code": 10,
+              "details": [
+                {
+                  "@type": "type.googleapis.com/ttn.lorawan.v3.ScheduleDownlinkErrorDetails",
+                  "path_errors": [
+                    {
+                      "namespace": "pkg/gatewayserver/io",
+                      "name": "rx_empty",
+                      "message_format": "settings empty",
+                      "correlation_id": "39374b03b9954850bab3a1c440d925b9",
+                      "code": 9
+                    },
+                    {
+                      "namespace": "pkg/gatewayserver/io",
+                      "name": "rx_window_schedule",
+                      "message_format": "schedule in Rx window `{window}` failed",
+                      "attributes": {
+                        "window": 2
+                      },
+                      "correlation_id": "571165e0e9ea4345bdf8d80aec2457a2",
+                      "cause": {
+                        "namespace": "pkg/gatewayserver/scheduling",
+                        "name": "no_clock_sync",
+                        "message_format": "no clock sync",
+                        "correlation_id": "eb4a23436c3c4c1f84b78351e1a61764",
+                        "code": 14
+                      },
+                      "code": 14
+                    }
+                  ]
+                }
+              ]
+            },
+            "code": 10,
+            "details": [
+              {
+                "@type": "type.googleapis.com/ttn.lorawan.v3.ScheduleDownlinkErrorDetails",
+                "path_errors": [
+                  {
+                    "namespace": "pkg/gatewayserver/io",
+                    "name": "rx_empty",
+                    "message_format": "settings empty",
+                    "correlation_id": "39374b03b9954850bab3a1c440d925b9",
+                    "code": 9
+                  },
+                  {
+                    "namespace": "pkg/gatewayserver/io",
+                    "name": "rx_window_schedule",
+                    "message_format": "schedule in Rx window `{window}` failed",
+                    "attributes": {
+                      "window": 2
+                    },
+                    "correlation_id": "571165e0e9ea4345bdf8d80aec2457a2",
+                    "cause": {
+                      "namespace": "pkg/gatewayserver/scheduling",
+                      "name": "no_clock_sync",
+                      "message_format": "no clock sync",
+                      "correlation_id": "eb4a23436c3c4c1f84b78351e1a61764",
+                      "code": 14
+                    },
+                    "code": 14
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "correlation_ids": [
+    "as:downlink:01JPM85RMBJRXDPR9Z91T2X3KC",
+    "ns:transmission:01JPM85RV0NVKRMWND9RVAT9YK"
+  ],
+  "origin": "ip-10-23-4-101.eu-west-1.compute.internal",
+  "context": {
+    "tenant-id": "CghnaWVmdW90YQ=="
+  },
+  "visibility": {
+    "rights": [
+      "RIGHT_APPLICATION_TRAFFIC_READ"
+    ]
+  },
+  "unique_id": "01JPM85RV14W94CJ3WBHTGHYKA"
+}
